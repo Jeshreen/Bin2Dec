@@ -5,6 +5,7 @@
       <p>Convert any Binary Number to Decimal Value</p>
       <b-row align-v="stretch">
         <b-col cols="7">
+          <!-- Get User input -->
           <b-form-group id="input-binary" label-for="binary-number">
             <label class="d-flex align-items-center justify-content-start"
               >Enter Binary Numbers </label
@@ -22,6 +23,7 @@
           <b-button @click="setconvertion">Convert</b-button>
         </b-col>
       </b-row>
+      <!-- Validation message -->
       <p
         v-if="isError"
         class="d-flex align-items-center invalid-feedback justify-content-start"
@@ -52,6 +54,9 @@ export default {
     };
   },
   methods: {
+    /**
+     * Method to convert binary value to decimal
+     */
     setconvertion() {
       //validation check
       this.getValidated(this.binaryValue);
@@ -75,6 +80,10 @@ export default {
         }, 0);
     },
 
+    /**
+     * Method to validate input value
+     * @param {String} value 
+     */
     getValidated(value) {
       //check if an empty value is entered
       if (value == "") {

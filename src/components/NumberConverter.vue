@@ -81,11 +81,6 @@ export default {
         return (this.isError = true);
       }
 
-      //check if the string length is less than 8
-      if (value && value.length > 8) {
-        return (this.isError = true);
-      }
-
       //check if its a binary value
       if (value && !value.match(/^[0-1]+$/g)) {
         return (this.isError = true);

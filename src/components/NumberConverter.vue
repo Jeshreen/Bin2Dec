@@ -8,7 +8,7 @@
           <!-- Get User input -->
           <b-form-group id="input-binary" label-for="binary-number">
             <label class="d-flex align-items-center justify-content-start"
-              >Enter Binary Numbers </label
+              >Enter Binary Number </label
             >
             <b-form-input
               id="binary-number"

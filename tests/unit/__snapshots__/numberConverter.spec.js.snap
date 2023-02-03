@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mount Component has the expected html structure 1`] = `
+<div>
+  <b-container-stub
+    tag="div"
+  >
+    <h1>
+      Bin2Dec
+    </h1>
+     
+    <p>
+      Convert any Binary Number to Decimal Value
+    </p>
+     
+    <b-row-stub
+      alignv="stretch"
+      tag="div"
+    >
+      <b-col-stub
+        cols="7"
+        tag="div"
+      >
+        <b-form-group-stub
+          feedbackarialive="assertive"
+          id="input-binary"
+          labelfor="binary-number"
+        >
+          <label
+            class="d-flex align-items-center justify-content-start"
+          >
+            Enter Binary Number 
+          </label>
+           
+          <b-form-input-stub
+            debounce="0"
+            formatter="[Function]"
+            id="binary-number"
+            placeholder="01011101"
+            required="true"
+            type="text"
+            value=""
+          />
+        </b-form-group-stub>
+      </b-col-stub>
+       
+      <b-col-stub
+        class="d-flex align-items-end"
+        tag="div"
+      >
+        <b-button-stub
+          tag="button"
+          target="_self"
+          type="button"
+          variant="secondary"
+        >
+          Convert
+        </b-button-stub>
+      </b-col-stub>
+    </b-row-stub>
+     
+    <!---->
+     
+    <div>
+      <!---->
+    </div>
+  </b-container-stub>
+</div>
+`;

@@ -1,5 +1,6 @@
 import { shallowMount, mount } from '@vue/test-utils'
 import NumberConverter from '@/components/NumberConverter.vue'
+import { nextTick } from 'vue';
 
 /**
  * Test 1 - Mounting the Number converter component
@@ -72,3 +73,23 @@ describe('getValidate function test', () => {
   })
 })
 
+describe('setconvertion function test', () => {
+  const wrapper = mount(NumberConverter)
+
+  //Test if the binary conversion is working
+  it("get binary conversion", async () => {
+    await wrapper.setData({ binaryValue: '111', isError: false, decimalValue: "" })
+    await nextTick();
+    wrapper.vm.setconvertion();
+    expect(wrapper.vm.decimalValue).toEqual(7);
+  })
+
+  //Test if the binary conversion fails if wrong value is passes
+  it("test validation", async () => {
+    await wrapper.setData({ binaryValue: '90', isError: false, decimalValue: "" })
+    await nextTick();
+    wrapper.vm.setconvertion();
+    expect(wrapper.vm.decimalValue).toBe("");
+  })
+
+});

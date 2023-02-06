@@ -29,7 +29,8 @@ exports[`Mount Component has the expected html structure 1`] = `
           <label
             class="d-flex align-items-center justify-content-start"
           >
-            Enter Binary Number 
+            Enter Binary Number
+          
           </label>
            
           <b-form-input-stub

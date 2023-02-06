@@ -91,5 +91,22 @@ describe('setconvertion function test', () => {
     wrapper.vm.setconvertion();
     expect(wrapper.vm.decimalValue).toBe("");
   })
-
 });
+
+describe('test the v-if condition', () => {
+  const wrapper = mount(NumberConverter);
+
+  //Test decimal value conversion is displayed
+  it("display decimal value conversion", async () => {
+    await wrapper.setData({ binaryValue: '111', isError: false, decimalValue: "7" })
+    const decimalLbl = wrapper.get('#decimal-value')
+    expect(decimalLbl.text()).toContain('Decimal Value : 7');
+  })
+
+  //Test error message is displayed
+  it("display decimal value conversion", async () => {
+    await wrapper.setData({ binaryValue: '9032', isError: true, decimalValue: "" })
+    const errorLbl = wrapper.get('#error-message')
+    expect(errorLbl.text()).toContain('Please Enter a valid binary digit(1/0) less than 8 digits');
+  })
+})

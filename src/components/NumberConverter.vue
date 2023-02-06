@@ -8,8 +8,8 @@
           <!-- Get User input -->
           <b-form-group id="input-binary" label-for="binary-number">
             <label class="d-flex align-items-center justify-content-start"
-              >Enter Binary Number </label
-            >
+              >Enter Binary Number
+            </label>
             <b-form-input
               id="binary-number"
               v-model="binaryValue"
@@ -25,6 +25,7 @@
       </b-row>
       <!-- Validation message -->
       <p
+        id="error-message"
         v-if="isError"
         class="d-flex align-items-center invalid-feedback justify-content-start"
       >
@@ -33,7 +34,7 @@
       <div>
         <b-row v-if="decimalValue">
           <b-col>
-            <h5 class="d-flex align-items-center justify-content-start">
+            <h5 class="d-flex align-items-center justify-content-start" id="decimal-value">
               Decimal Value : {{ decimalValue }}
             </h5>
           </b-col>
@@ -82,7 +83,7 @@ export default {
 
     /**
      * Method to validate input value
-     * @param {String} value 
+     * @param {String} value
      */
     getValidated(value) {
       //check if an empty value is entered
